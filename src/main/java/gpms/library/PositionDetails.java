@@ -1,17 +1,17 @@
 package gpms.library;
 
-public class PositionDetails extends StaffObjects {
-	private int _id;
+public class PositionDetails extends UserObjects {
+	private String _id;
 	private String _positiontype;
 	private String _positiontitle;
 	private String _department;
 	private String _college;
 
-	public int get_id() {
+	public String get_id() {
 		return _id;
 	}
 
-	public void set_id(int _id) {
+	public void set_id(String _id) {
 		this._id = _id;
 	}
 

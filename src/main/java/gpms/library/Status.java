@@ -1,4 +1,4 @@
-package socialnetworking.library;
+package gpms.library;
 
 public enum Status {
 	PENDING, CONFIRMED, YOU

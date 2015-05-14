@@ -1,17 +1,17 @@
 package gpms.library;
 
 public class RequestType extends ProjectInfo {
-	private int _id;
+	private String _id;
 	private boolean _preProposal;
 	private boolean _newProposal;
 	private boolean _continuation;
 	private boolean _supplement;
 
-	public int get_id() {
+	public String get_id() {
 		return _id;
 	}
 
-	public void set_id(int _id) {
+	public void set_id(String _id) {
 		this._id = _id;
 	}
 

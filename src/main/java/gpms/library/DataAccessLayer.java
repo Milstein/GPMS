@@ -1,5 +1,3 @@
-package socialnetworking.library;
-
 import java.net.InetAddress;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
