@@ -31,6 +31,8 @@ public class TodoDAO {
 	private static Mongo getMongo() throws UnknownHostException, MongoException {
 		if (mongo == null) {
 			mongo = new Mongo("127.0.0.1:27017");
+			// Mongo mongo = new Mongo(new
+			// MongoURI("mongodb://localhost/mjormIsFun"));
 		}
 		return mongo;
 	}
