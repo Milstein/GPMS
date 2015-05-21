@@ -2,19 +2,21 @@ package gpms.library;
 
 import java.util.ArrayList;
 
+import org.bson.types.ObjectId;
+
 public class SponsorAndBudgetInfo extends Proposal {
-	private String _id;
+	private ObjectId _id;
 	private ArrayList<String> _grantingAgency;
 	private double _directCosts;
 	private double _faCosts;
 	private double _totalCosts;
 	private double _faRate;
 
-	public String get_id() {
+	public ObjectId get_id() {
 		return _id;
 	}
 
-	public void set_id(String _id) {
+	public void set_id(ObjectId _id) {
 		this._id = _id;
 	}
 

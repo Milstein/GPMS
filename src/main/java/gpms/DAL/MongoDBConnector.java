@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 import org.bson.types.ObjectId;
 
+import com.google.code.morphia.Datastore;
+import com.google.code.morphia.Morphia;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -21,6 +23,12 @@ public class MongoDBConnector {
 	static DB db = null;
 	static MongoDBConnector theInstance = null;
 	private static String dbName = "GPMS";
+	
+	private static final String DBNAME = "todoapp";
+	
+	private static Morphia morphia;
+	private static Mongo mongo;
+	private static Datastore ds;
 
 	// For MySQL
 	public Connection Get_Connection() throws Exception {
@@ -37,6 +45,30 @@ public class MongoDBConnector {
 			throw e;
 		}
 	}
+	
+	// private static Morphia getMorphia(string className)
+	// throws UnknownHostException, MongoException{
+	// if ( morphia == null){
+	// morphia = new Morphia().map(className.class);
+	// }
+	// return morphia;
+	// }
+	//
+	// private static Mongo getMongo() throws UnknownHostException,
+	// MongoException {
+	// if (mongo == null) {
+	// mongo = new Mongo();
+	// }
+	// return mongo;
+	// }
+	//
+	// private static Datastore getDatastore() throws UnknownHostException,
+	// MongoException {
+	// if (ds == null) {
+	// ds = getMorphia().createDatastore(getMongo(), DBNAME);
+	// }
+	// return ds;
+	// }
 
 	// For MongoDB
 	@SuppressWarnings("deprecation")

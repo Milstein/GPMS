@@ -1,23 +1,67 @@
 package gpms.library;
 
+import gpms.DAL.ProposalDAO;
+
 import java.util.ArrayList;
 
+import org.bson.types.ObjectId;
+
+import com.google.code.morphia.annotations.Entity;
+import com.google.code.morphia.annotations.Id;
+import com.google.code.morphia.annotations.Reference;
+
+@Entity(value = ProposalDAO.COLLECTION_NAME)
 public class Proposal {
-	private String _id;
+	@Id
+	private ObjectId _id;
 	private String _proposalNo;
 	private String _dateReceived;
 	private String _proposalStatus;
+	@Reference("investigatorInfo")
 	private ArrayList<InvestigatorInfo> _investigatorInfo;
+	@Reference("projectInfo")
 	private ArrayList<ProjectInfo> _projectInfo;
+	@Reference("sponsorAndBudgetInfo")
 	private ArrayList<SponsorAndBudgetInfo> _sponsorAndBudgetInfo;
+	@Reference("costShareInfo")
 	private ArrayList<CostShareInfo> _costShareInfo;
 
+	public Proposal(String proposalNo, String dateReceived,
+			String proposalStatus,
+			ArrayList<InvestigatorInfo> investigatorInfo,
+			ArrayList<ProjectInfo> projectInfo,
+			ArrayList<SponsorAndBudgetInfo> sponsorAndBudgetInfo,
+			ArrayList<CostShareInfo> costShareInfo, ObjectId id) {
+		this._proposalNo = proposalNo;
+		this._dateReceived = dateReceived;
+		this._proposalStatus = proposalStatus;
+
+		// TODO:: need to do in loop of the list object
+		this._investigatorInfo = investigatorInfo;
+		this._projectInfo = projectInfo;
+		this._sponsorAndBudgetInfo = sponsorAndBudgetInfo;
+		this._costShareInfo = costShareInfo;
+		this.set_id(id);
+
+	}
+
+	public Proposal(String proposalNo, String dateReceived,
+			String proposalStatus) {
+		this._proposalNo = proposalNo;
+		this._dateReceived = dateReceived;
+		this._proposalStatus = proposalStatus;
+	}
+
+	public Proposal() {
+
+	}
+
 	// TODO: add more class object as per document
-	public String get_id() {
+	public ObjectId get_id() {
 		return _id;
 	}
 
-	public void set_id(String _id) {
+	public void set_id(ObjectId _id) {
 		this._id = _id;
 	}
 
@@ -79,4 +123,9 @@ public class Proposal {
 		this._costShareInfo = _costShareInfo;
 	}
 
+	@Override
+	public String toString() {
+		return this.get_proposalNo() + " " + this.get_dateReceived() + " "
+				+ this.get_proposalStatus();
+	}
 }

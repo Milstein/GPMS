@@ -1,10 +1,13 @@
 package gpms.library;
 
-import java.util.ArrayList;
 import java.util.Date;
 
+import org.bson.types.ObjectId;
+
+import com.google.code.morphia.annotations.Id;
+
 public class ProjectInfo extends Proposal {
-	private String _id;
+	@Id private ObjectId _id;
 	private String _projectTitle;
 	// private ArrayList<ProjectType> _projectType;
 	private boolean _researchBasic;
@@ -25,11 +28,11 @@ public class ProjectInfo extends Proposal {
 	private boolean _offCampus;
 	private boolean _onCampus;
 
-	public String get_id() {
+	public ObjectId get_id() {
 		return _id;
 	}
 
-	public void set_id(String _id) {
+	public void set_id(ObjectId _id) {
 		this._id = _id;
 	}
 

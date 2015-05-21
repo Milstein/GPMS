@@ -1,7 +1,9 @@
 package gpms.library;
 
+import com.google.code.morphia.annotations.Id;
+
 public class PositionDetails extends UserAccount {
-	private String _id;
+	@Id private String _id;
 	private String _positiontype;
 	private String _positiontitle;
 	private String _department;
