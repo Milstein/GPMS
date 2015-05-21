@@ -1,0 +1,3 @@
+http://www.javabeat.net/developing-a-simple-todo-application-using-javafx-java-and-mongodb-part-1/
+http://www.javabeat.net/developing-a-simple-todo-application-using-javafx-java-and-mongodb-part-2/
+http://www.javabeat.net/using-morphia-java-library-for-mongodb/
