@@ -6,7 +6,7 @@ import com.mongodb.*;
 
 import org.bson.types.ObjectId;
 
-import gpms.library.Todo;
+import gpms.model.Todo;
 
 import java.net.UnknownHostException;
 import java.util.*;

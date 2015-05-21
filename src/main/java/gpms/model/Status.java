@@ -1,4 +1,4 @@
-package gpms.library;
+package gpms.model;
 
 public enum Status {
 	PENDING, CONFIRMED, YOU

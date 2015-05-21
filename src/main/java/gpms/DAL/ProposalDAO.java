@@ -1,7 +1,7 @@
 package gpms.DAL;
 
-import gpms.library.Proposal;
-import gpms.library.UserAccount;
+import gpms.model.Proposal;
+import gpms.model.UserAccount;
 
 import java.net.UnknownHostException;
 import java.util.List;

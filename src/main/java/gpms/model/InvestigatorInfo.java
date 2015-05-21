@@ -1,4 +1,4 @@
-package gpms.library;
+package gpms.model;
 
 import java.util.ArrayList;
 

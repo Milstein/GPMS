@@ -1,3 +1,4 @@
+package gpms.model;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;

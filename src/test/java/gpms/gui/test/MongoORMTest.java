@@ -1,7 +1,7 @@
 package gpms.gui.test;
 
 import gpms.DAL.TodoDAO;
-import gpms.library.Todo;
+import gpms.model.Todo;
 
 import java.net.UnknownHostException;
 

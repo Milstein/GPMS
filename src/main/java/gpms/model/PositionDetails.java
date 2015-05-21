@@ -1,4 +1,4 @@
-package gpms.library;
+package gpms.model;
 
 import com.google.code.morphia.annotations.Id;
 
