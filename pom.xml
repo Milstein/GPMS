@@ -7,6 +7,12 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>GPMS Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	<repositories>
+		<repository>
+			<id>morphia-googlecode</id>
+			<url>http://morphia.googlecode.com/svn/mavenrepo/</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -30,6 +36,11 @@
 			<groupId>org.apache.gora</groupId>
 			<artifactId>gora-mongodb</artifactId>
 			<version>0.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.morphia</groupId>
+			<artifactId>morphia</artifactId>
+			<version>0.99</version>
 		</dependency>
 	</dependencies>
 	<build>
