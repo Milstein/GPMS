@@ -33,6 +33,8 @@ public class TodoDAO {
 			mongo = new Mongo("127.0.0.1:27017");
 			// Mongo mongo = new Mongo(new
 			// MongoURI("mongodb://localhost/mjormIsFun"));
+			// mongodb://db1.example.net,db2.example.net:2500/?replicaSet=test
+			// mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
 		}
 		return mongo;
 	}
