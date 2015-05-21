@@ -3,7 +3,7 @@ package gpms.library;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class ProjectInfo extends ProposalObjects {
+public class ProjectInfo extends Proposal {
 	private String _id;
 	private String _projectTitle;
 	// private ArrayList<ProjectType> _projectType;

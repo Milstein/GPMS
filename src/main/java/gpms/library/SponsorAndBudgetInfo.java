@@ -2,7 +2,7 @@ package gpms.library;
 
 import java.util.ArrayList;
 
-public class SponsorAndBudgetInfo extends ProposalObjects {
+public class SponsorAndBudgetInfo extends Proposal {
 	private String _id;
 	private ArrayList<String> _grantingAgency;
 	private double _directCosts;

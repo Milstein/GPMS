@@ -2,7 +2,7 @@ package gpms.library;
 
 import java.util.ArrayList;
 
-public class InvestigatorInfo extends ProposalObjects {
+public class InvestigatorInfo extends Proposal {
 	private String _id;
 	private String _pi;
 	private ArrayList<String> _copi;

@@ -12,7 +12,7 @@ public class DataAccessLayer {
 	private Connection connection;
 
 	public DataAccessLayer() {
-		Database database = new Database();
+		MongoDBConnector database = new MongoDBConnector();
 		try {
 			connection = database.Get_Connection();
 		} catch (Exception e) {

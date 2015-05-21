@@ -1,6 +1,6 @@
 package gpms.library;
 
-public class PositionDetails extends UserObjects {
+public class PositionDetails extends UserAccount {
 	private String _id;
 	private String _positiontype;
 	private String _positiontitle;

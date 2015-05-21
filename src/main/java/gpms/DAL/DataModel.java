@@ -1,5 +1,4 @@
 package gpms.DAL;
-
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -7,7 +6,12 @@ public class DataModel {
 	private DataAccessLayer dal;
 
 	public DataModel() {
-		dal = new DataAccessLayer();
+
+		try {
+			dal = new DataAccessLayer();
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 
 	// Tweet Service Model

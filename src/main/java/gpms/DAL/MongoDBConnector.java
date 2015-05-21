@@ -16,10 +16,10 @@ import com.mongodb.DBObject;
 import com.mongodb.Mongo;
 import com.mongodb.MongoException;
 
-public class Database {
+public class MongoDBConnector {
 	static Mongo connection = null;
 	static DB db = null;
-	static Database theInstance = null;
+	static MongoDBConnector theInstance = null;
 	private static String dbName = "GPMS";
 
 	// For MySQL
@@ -40,18 +40,18 @@ public class Database {
 
 	// For MongoDB
 	@SuppressWarnings("deprecation")
-	public Database(String dataBaseName) throws UnknownHostException,
+	public MongoDBConnector(String dataBaseName) throws UnknownHostException,
 			MongoException {
 		connection = new Mongo("127.0.0.1:27017");
 		db = connection.getDB(dataBaseName);
 	}
 
-	public static Database getMongoDBInstance() {
+	public static MongoDBConnector getMongoDBInstance() {
 		if (connection == null) {
-			synchronized (Database.class) {
+			synchronized (MongoDBConnector.class) {
 				if (connection == null) {
 					try {
-						theInstance = new Database(dbName);
+						theInstance = new MongoDBConnector(dbName);
 					} catch (UnknownHostException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();

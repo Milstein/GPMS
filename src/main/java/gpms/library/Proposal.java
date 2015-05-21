@@ -2,7 +2,7 @@ package gpms.library;
 
 import java.util.ArrayList;
 
-public class ProposalObjects {
+public class Proposal {
 	private String _id;
 	private String _proposalNo;
 	private String _dateReceived;

@@ -1,5 +1,5 @@
 package gpms.library;
 
-public class CostShareInfo extends ProposalObjects {
+public class CostShareInfo extends Proposal {
 
 }
