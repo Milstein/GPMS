@@ -91,7 +91,6 @@ public class Accesscontrol {
 
 	private String createXACMLRequest(String userName, String resource,
 			String action) {
-
 		return "<Request xmlns=\"urn:oasis:names:tc:xacml:3.0:core:schema:wd-17\" CombinedDecision=\"false\" ReturnPolicyIdList=\"false\">\n"
 				+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:action\">\n"
 				+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:action:action-id\" IncludeInResult=\"false\">\n"
@@ -114,12 +113,10 @@ public class Accesscontrol {
 				+ "</AttributeValue>\n"
 				+ "</Attribute>\n"
 				+ "</Attributes>\n" + "</Request>";
-
 	}
 
 	private String createXACMLRequest(String userName, String resource,
 			String action, String environment) {
-
 		return "<Request xmlns=\"urn:oasis:names:tc:xacml:3.0:core:schema:wd-17\" CombinedDecision=\"false\" ReturnPolicyIdList=\"false\">\n"
 				+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:action\">\n"
 				+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:action:action-id\" IncludeInResult=\"false\">\n"
@@ -149,7 +146,6 @@ public class Accesscontrol {
 				+ "</AttributeValue>\n"
 				+ "</Attribute>\n"
 				+ "</Attributes>\n" + "</Request>";
-
 	}
 
 	private/* String */ResponseCtx getResponse(String request) {
@@ -167,7 +163,6 @@ public class Accesscontrol {
 			RequestCtxFactory rcf = RequestCtxFactory.getFactory();
 			AbstractRequestCtx arc = rcf.getRequestCtx(request);
 			rc = pdp.evaluate(arc);
-
 		} catch (Exception e) {
 			System.out.print("somethingwrong");
 		}
